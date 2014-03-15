@@ -50,7 +50,7 @@ how do we check for these jumps and delete firms that present this feature.
 Nick Cox suggests the following:
 
     * Step 1
-	bysort firm (year): gen diff = cond(n == 1, 1, year - year[n-1])
+	bysort firm (year): gen diff = cond(\_n == 1, 1, year - year[n-1])
 	list, sepby(firm)
 
 
