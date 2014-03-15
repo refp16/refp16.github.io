@@ -53,4 +53,49 @@ Nick Cox suggests the following:
 	bysort firm (year): gen diff = cond(_n == 1, 1, year - year[_n-1])
 	list, sepby(firm)
 
+And again, we want to `sort` by _firm_ and _diff_, but `drop` a _firm_ group.
+It may not be obvious the need to sort _diff_ in this example, 
+but consider the case in which
 
+	     |----------------------------|
+	  7. | 2000      3      14      1 |
+	  8. | 2002      3      11      2 |
+	     |----------------------------|
+
+was instead
+
+	     |----------------------------|
+	  7. | 2000      3      14      1 |
+	  8. | 2004      3      11      4 |
+	  9. | 2005      3      18      1 |
+	     |----------------------------|
+
+Note that the way in which we identify jumps for a firm is looking for
+ _diff_ > 1.
+To be able to reliably locate a jump, we have to sort _diff_ in ascending
+order so that the high numbers end up at the end. In particular, check the last
+one (_\_N_) and see if it is higher then 1. If so, there's at least one jump.
+If not, then all previous numbers must equal 1 and there are no jumps. 
+
+The result of executing Step 2 is
+
+	     +----------------------------+
+	     | year   firm   sales   diff |
+	     |----------------------------|
+	  1. | 2000      1      36      1 |
+	  2. | 2001      1      45      1 |
+	  3. | 2002      1      39      1 |
+	     |----------------------------|
+	  4. | 2000      2      42      1 |
+	  5. | 2001      2      42      1 |
+	  6. | 2002      2      36      1 |
+	     |----------------------------|
+	  7. | 2000      4      12      1 |
+	  8. | 2001      4      12      1 |
+	  9. | 2002      4       9      1 |
+	     |----------------------------|
+	 10. | 2001      5      10      1 |
+	 11. | 2002      5       7      1 |
+	     +----------------------------+
+
+Going back to our original example, if we were to use:
