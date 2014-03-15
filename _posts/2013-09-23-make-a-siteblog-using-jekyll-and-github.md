@@ -171,5 +171,12 @@ environment:
 	\frac{1}{x^4}.
     \end{equation}
     </div>
+    
+These three pieces of code render, respectively: 
+<div>$$ f = ma, $$</div>
+
+\begin{equation}
+    \frac{1}{x^3}
+\end{equation}    
 
 
