@@ -153,4 +153,14 @@ With this minor change I have managed the following:
 
 - Three ways of doing block math. 
 
+The first one uses
+
+    <div>$$ f = ma. $$</div>
+
+The second one uses the LaTex `equation` environemnt on its own:
+    
+    \begin{equation}
+        \frac{1}{x^3}
+    \end{equation}
+
 
