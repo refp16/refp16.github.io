@@ -151,4 +151,65 @@ This was not intended.
 
 All this speaks of the importance of getting the `bysort`s right. 
 
+###Appendix###
+
+The complete code:
+
+	* ------------------------------ input -----------------------------------------
+	clear
+	input year firm sales
+	2000 1 36
+	2000 3 14
+	2000 2 42
+	2000 4 12
+
+	2001 1 45
+	2001 2 42
+	2001 4 12
+	2001 5 10
+
+	2002 1 39
+	2002 2 36
+	2002 3 11
+	2002 5 7
+	2002 4 9
+	end
+	sort firm year
+	list, sepby(firm)
+
+	* ----------------- delete firms with jumps in time series ---------------------
+
+	* Credit: Nick Cox
+
+	* Step 1
+	bysort firm (year) : gen diff = cond(_n == 1, 1, year - year[_n-1])
+	list, sepby(firm)
+
+	preserve
+
+		* Step 2
+		bysort firm (diff): drop if diff[_N] > 1
+		list, sepby(firm)
+
+	restore
+
+	* ------------------------- incorrect alternatives------------------------------
+
+	preserve
+
+		* Step 2 (alternative 1)
+		bysort firm: drop if diff[_N] > 1
+		list, sepby(firm)
+
+	restore
+
+	preserve
+
+		* Step 2 (alternative 2)
+		bysort firm diff: drop if diff[_N] > 1
+		list, sepby(firm)
+
+	restore
+
+	* ------------------------------------------------------------------------------
 
