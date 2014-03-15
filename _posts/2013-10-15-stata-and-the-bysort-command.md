@@ -20,7 +20,7 @@ at the Statalist Archive. After playing around with a response, I
 finally came to grips with the command.
 
 The query was on how to eliminate _firms_ in a panel database if they presented
-jumps along the _year_ variable. For example, start with a 
+gaps along the _year_ variable. For example, start with a 
 database that looks like this:
 
 	     +---------------------+
@@ -45,15 +45,20 @@ database that looks like this:
 	 13. | 2002      5       7 |
 	     +---------------------+
 
-Firm 3 presents a jump because there is no year 2001. So the question is 
-how do we check for these jumps and delete firms that present this feature.
+Firm 3 presents a gap because there is no year 2001. So the question is 
+how do we check for these gaps and delete firms that present this feature.
 Nick Cox suggests the following:
 
     * Step 1
 	bysort firm (year): gen diff = cond(_n == 1, 1, year - year[_n-1])
 	list, sepby(firm)
 
-And again, we want to `sort` by _firm_ and _diff_, but `drop` a _firm_ group.
+And again, we want to `sort` but by _firm_ and _diff_, `drop`ing _firm_ groups:
+
+    * Step 2
+    bysort firm (diff): drop if diff[_N] > 1
+    list, sepby(firm)
+        
 It may not be obvious the need to sort _diff_ in this example, 
 but consider the case in which
 
@@ -70,12 +75,13 @@ was instead
 	  9. | 2005      3      18      1 |
 	     |----------------------------|
 
-Note that the way in which we identify jumps for a firm is looking for
+Note that the way in which we identify gaps for a firm is searching for
  _diff_ > 1.
-To be able to reliably locate a jump, we have to sort _diff_ in ascending
-order so that the high numbers end up at the end. In particular, check the last
-one (_\_N_) and see if it is higher then 1. If so, there's at least one jump.
-If not, then all previous numbers must equal 1 and there are no jumps. 
+To be able to reliably locate a gap, we have to sort _diff_ in ascending
+order so that the high numbers move to the end of the database. In particular, 
+check the last
+one (\_N) and see if it is higher then 1. If so, there's at least one gap.
+If not, then all previous numbers must equal 1 and there are no gaps. 
 
 The result of executing Step 2 is
 
@@ -106,7 +112,7 @@ Going back to our original example, if we were to use:
 
 we would get the same correct result. But this code is not general since
 it is only by chance that _diff_ is already sorted in ascending order.
-If we were to apply this in a realistic setting, we would almost surely
+If we were to apply this in a realistic setting, we could
 end up with undesired consequences.
 
 Finally, we could try
@@ -116,12 +122,12 @@ Finally, we could try
     list, sepby(firm)
 
 This alternative presents _diff_ **without** the parenthesis. As before, 
-we are sorting _firm_ _diff_ but we are also dropping observations using
-groups made by these two variables. Unlike the previous cases where the
+we are sorting _firm_ _diff_ but we are also dropping observations grouped by 
+these two variables. Unlike the previous cases where the
 `drop` applies to groups of _firms_, effectively ridding all observations
 of a firm with jumps, here we delete only those observations of a firm that 
 comply with the `if` condition individually. Potentially, we are leaving behind
-observations that belong to firms with jumps.
+observations that belong to firms with gaps.
 
 The following result confirms this:
 
