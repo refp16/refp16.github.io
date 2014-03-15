@@ -109,3 +109,46 @@ it is only by chance that _diff_ is already sorted in ascending order.
 If we were to apply this in a realistic setting, we would almost surely
 end up with undesired consequences.
 
+Finally, we could try
+
+    * Step 2 (alternative 2)
+    bysort firm diff: drop if diff[_N] > 1
+    list, sepby(firm)
+
+This alternative presents _diff_ **without** the parenthesis. As before, 
+we are sorting _firm_ _diff_ but we are also dropping observations using
+groups made by these two variables. Unlike the previous cases where the
+`drop` applies to groups of _firms_, effectively ridding all observations
+of a firm with jumps, here we delete only those observations of a firm that 
+comply with the `if` condition individually. Potentially, we are leaving behind
+observations that belong to firms with jumps.
+
+The following result confirms this:
+
+	     +----------------------------+
+	     | year   firm   sales   diff |
+	     |----------------------------|
+	  1. | 2000      1      36      1 |
+	  2. | 2001      1      45      1 |
+	  3. | 2002      1      39      1 |
+	     |----------------------------|
+	  4. | 2000      2      42      1 |
+	  5. | 2001      2      42      1 |
+	  6. | 2002      2      36      1 |
+	     |----------------------------|
+	  7. | 2000      3      14      1 |
+	     |----------------------------|
+	  8. | 2000      4      12      1 |
+	  9. | 2001      4      12      1 |
+	 10. | 2002      4       9      1 |
+	     |----------------------------|
+	 11. | 2001      5      10      1 |
+	 12. | 2002      5       7      1 |
+	     +----------------------------+
+
+Notice how one observation for firm 3 managed to survive the `drop`.
+This was not intended.
+
+All this speaks of the importance of getting the `bysort`s right. 
+
+
