@@ -192,4 +192,54 @@ by the markdown parser. Interestingly, when using the `equation` environment,
 there seems to be no need for tags. I have no explanation for this (and
 many other things related to the rendering of mathematics).
 
+More details can be found at:
+
+[http://jekyllbootstrap.com/]()
+
+[http://jekyllbootstrap.com/usage/jekyll-quick-start.html]()
+
+[http://jekyllrb.com]()
+
+[http://daringfireball.net/projects/markdown/]()
+
+[http://git-scm.com/]()
+
+##Credits##
+[http://truongtx.me/2013/05/08/blogging-using-your-favorite-text-editor-with-git-and-jekyll/]()
+
+[http://stackoverflow.com/questions/10987992/using-mathjax-with-jekyll]()
+
+Carl Boettiger (personal correspondance)
+
+
+<pre>
+  +-----------------------+                                       +-----------------------+
+  |  Jekyll-Bootstrap     |                                       |   _site               |
+  +---------+-------------+                                       |-----------------------|
+            |                                                     |                       |
+            |                  +-----------------+                |                       |       +-----------------+
+            |                  |                 |                |                       |       |                 |
+            |               +-&gt;|    Jekyll       +---------------&gt;|                       +------&gt;| localhost:4000  |
+            v               |  +-----------------+                |                       |       +-----------------+
+  +-----------------------+ |          ^                          |                       |
+  |  user.github.com      | |          |                          |                       |
+  |-----------------------| |          |                          |                       |
+  |                       +-+          |                          |                       |
+  |                       |            |                          |                       |
+  |                       |            |                          +-----------------------+
+  |                       |       +----+------+
+  |                       +-+     | GitHub    |
+  |                       | |     |   Gem     |
+  |                       | |     +----+------+
+  |                       | |          |
+  |                       | |          |
+  |                       | |          |
+  +-----------------------+ |          v
+                            |  +-----------------+                                                +-----------------+
+                            |  |                 |                                                |                 |
+                            +-&gt;| GitHub + Jekyll +-----------------------------------------------&gt;|    www          |
+                               +-----------------+                                                +-----------------+</pre>
+
+
+
 
