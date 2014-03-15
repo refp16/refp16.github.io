@@ -17,8 +17,24 @@ and a [FAQ](/faqs.html).
 
 (I have some notes that should be transferred to this site soon.)
 
-<img src="http://projecteuler.net/profile/refp16.png" alt="PE Badge">
+<!--
+<img src="http://projecteuler.net/profile/refp16.png" alt="PE Badge" title="Project Euler site"/>
+<img src="http://stackexchange.com/users/flair/2372872.png?theme=dark" width="200" height="60" alt="SO Flair" title="Profiles">
+
+<a href="http://projecteuler.net">
+<img src="http://projecteuler.net/profile/refp16.png" alt="PE Badge" title="Project Euler site">
+</a>
 <a href="http://stackexchange.com/users/2372872">
 <img src="http://stackexchange.com/users/flair/2372872.png?theme=dark" width="200" height="60" alt="SO Flair" title="Profile for Roberto Ferrer on Stack Exchange, a network of free, community-driven QA sites">
 </a>
+-->
 
+<td>
+<a href="http://projecteuler.net">
+<img src="http://projecteuler.net/profile/refp16.png" alt="PE Badge" title="Project Euler site" class="decoration">
+</a>
+<br>
+<a href="http://stackexchange.com/users/2372872">
+<img src="http://stackexchange.com/users/flair/2372872.png?theme=dark" width="200" height="60" alt="SO Flair" title="Profile for Roberto Ferrer on Stack Exchange, a network of free, community-driven QA sites">
+</a>
+</td>
