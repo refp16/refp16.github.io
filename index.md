@@ -29,9 +29,13 @@ and a [FAQ](/faqs.html).
 </a>
 -->
 
+<!-- Tip to stack images without spacing from:
+https://developer.mozilla.org/en-US/docs/Images,_Tables,_and_Mysterious_Gaps
+-->
+
 <td>
 <a href="http://projecteuler.net">
-<img src="http://projecteuler.net/profile/refp16.png" alt="PE Badge" title="Project Euler site" class="decoration">
+<img src="http://projecteuler.net/profile/refp16.png" alt="PE Badge" class="decoration" title="Project Euler, a series of mathematical/computer programming problems">
 </a>
 <br>
 <a href="http://stackexchange.com/users/2372872">
