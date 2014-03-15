@@ -149,4 +149,8 @@ template file `~/USER.github.com/_includes/themes/twitter/default.html`:
 
 With this minor change I have managed the following:
 
+- One way of doing inline math: `\\( 1/x^2 \\)`, rendering \\( 1/x^{2} \\).
+
+- Three ways of doing block math. 
+
 
