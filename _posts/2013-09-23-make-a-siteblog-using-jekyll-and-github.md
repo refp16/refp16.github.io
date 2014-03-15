@@ -177,6 +177,19 @@ These three pieces of code render, respectively:
 
 \begin{equation}
     \frac{1}{x^3}
-\end{equation}    
+\end{equation}
+
+and
+
+<div>
+\begin{equation}
+    \frac{1}{x^4}.
+\end{equation}
+</div>
+
+The `<div>` tags are meant to protect the latex syntax from being messed up
+by the markdown parser. Interestingly, when using the `equation` environment,
+there seems to be no need for tags. I have no explanation for this (and
+many other things related to the rendering of mathematics).
 
 
