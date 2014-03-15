@@ -24,7 +24,7 @@ If I happen to solve the problem in a
 fashion similar to the book, I will still post it. Along with what I believe
 are the correct answers, I will try to add my wrongful lines of thinking 
 just to show that problem solving is not as straightforward and ordered as 
-some readings suggest. If I find out a posted 
+some readings suggest. If I find that a posted 
 answer is incorrect in some way, I will update that post to include a 
 correction; in these cases, they will be tagged accordingly. Posts may 
 come in a disordered way; use the tag features of the 
