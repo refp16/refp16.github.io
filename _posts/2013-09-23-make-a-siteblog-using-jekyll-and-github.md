@@ -138,4 +138,15 @@ the original rakefile provided by the Jekyll-Bootstrap project. You can check
 my rakefile at [https://github.com/refp16/](https://github.com/refp16/refp16.github.com/blob/master/Rakefile)
 
 ###Add the possibility of rendering mathematics###
+If you're interested in using mathematics in your site, you can do so
+using MathJax. I haven't found the ideal solution to this problem but
+what I have will do for the moment.
+
+Add the following JavaScript snippet to the `<head>` block of the HTML
+template file `~/USER.github.com/_includes/themes/twitter/default.html`:
+
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+With this minor change I have managed the following:
+
 
