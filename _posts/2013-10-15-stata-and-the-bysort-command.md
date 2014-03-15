@@ -99,3 +99,19 @@ The result of executing Step 2 is
 	     +----------------------------+
 
 Going back to our original example, if we were to use:
+
+	* Step 2 (alternative 1)
+	bysort firm: drop if diff[_N] > 1
+	list, sepby(firm)
+
+we would get the same correct result. But this code is not general since
+it is only by chance that _diff_ is already sorted in ascending order.
+If we were to apply this in a realistic setting, we would almost surely
+end up with undesired consequences.
+
+Finally, we could try
+
+	* Step 2 (alternative 2)
+	bysort firm diff: drop if diff[_N] > 1
+	list, sepby(firm)
+
