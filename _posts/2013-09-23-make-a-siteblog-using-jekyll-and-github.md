@@ -157,10 +157,19 @@ The first one uses
 
     <div>$$ f = ma. $$</div>
 
-The second one uses the LaTex `equation` environemnt on its own:
+The second one uses the LaTeX `equation` environemnt on its own:
     
     \begin{equation}
         \frac{1}{x^3}
     \end{equation}
+    
+and the third one uses surrounding `<div>` tags with the `equation` 
+environment:
+    
+    <div>
+    \begin{equation}
+	\frac{1}{x^4}.
+    \end{equation}
+    </div>
 
 
