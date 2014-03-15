@@ -161,7 +161,7 @@ we are sorting _firm_ _diff_ but we are also dropping observations using
 groups made by these two variables. Unlike the previous cases where the
 `drop` applies to groups of _firms_, effectively ridding all observations
 of a firm with jumps, here we delete only those observations of a firm that 
-comply with the `if` condition individually.  
+comply with the `if` condition individually.
 Potentially, we are leaving behind observations that belong to firms with 
 jumps.
 
