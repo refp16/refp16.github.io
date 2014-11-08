@@ -43,6 +43,8 @@ https://developer.mozilla.org/en-US/docs/Images,_Tables,_and_Mysterious_Gaps
 </a>
 </td>
 
+<!--
 <script type="text/javascript" src="http://www.worldtimeserver.com/clocks/embed.js"></script><script type="text/javascript" language="JavaScript">objUTC=new Object;objUTC.wtsclock="wtsclock001.swf";objUTC.color="FF9900";objUTC.wtsid="UTC";objUTC.width=200;objUTC.height=200;objUTC.wmode="transparent";showClock(objUTC);</script>
 
 <embed src="http://www.worldtimeserver.com/clocks/wtsclock001.swf?color=FF9900&wtsid=UTC" width="200" height="200" wmode="transparent" type="application/x-shockwave-flash" />
+-->
