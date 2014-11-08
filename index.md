@@ -24,8 +24,8 @@ and a [FAQ](/faqs.html).
 <a href="http://projecteuler.net">
 <img src="http://projecteuler.net/profile/refp16.png" alt="PE Badge" title="Project Euler site">
 </a>
-<a href="http://stackexchange.com/users/2372872">
-<img src="http://stackexchange.com/users/flair/2372872.png?theme=dark" width="200" height="60" alt="SO Flair" title="Profile for Roberto Ferrer on Stack Exchange, a network of free, community-driven QA sites">
+<a href="http://stackoverflow.com/users/2077064/roberto-ferrer>
+<img src="http://stackoverflow.com/users/flair/2077064.png?theme=dark" width="200" height="60" alt="SO Flair" title="Profile for Roberto Ferrer on Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 </a>
 -->
 
@@ -38,7 +38,11 @@ https://developer.mozilla.org/en-US/docs/Images,_Tables,_and_Mysterious_Gaps
 <img src="http://projecteuler.net/profile/refp16.png" alt="PE Badge" class="decoration" title="Project Euler, a series of mathematical/computer programming problems">
 </a>
 <br>
-<a href="http://stackexchange.com/users/2372872">
-<img src="http://stackexchange.com/users/flair/2372872.png?theme=dark" width="200" height="60" alt="SO Flair" title="Profile for Roberto Ferrer on Stack Exchange, a network of free, community-driven QA sites">
+<a href="http://stackoverflow.com/users/2077064/roberto-ferrer">
+<img src="http://stackoverflow.com/users/flair/2077064.png?theme=dark" width="200" height="60" alt="SO Flair" title="Profile for Roberto Ferrer at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 </a>
 </td>
+
+<script type="text/javascript" src="http://www.worldtimeserver.com/clocks/embed.js"></script><script type="text/javascript" language="JavaScript">objUTC=new Object;objUTC.wtsclock="wtsclock001.swf";objUTC.color="FF9900";objUTC.wtsid="UTC";objUTC.width=200;objUTC.height=200;objUTC.wmode="transparent";showClock(objUTC);</script>
+
+<embed src="http://www.worldtimeserver.com/clocks/wtsclock001.swf?color=FF9900&wtsid=UTC" width="200" height="200" wmode="transparent" type="application/x-shockwave-flash" />
